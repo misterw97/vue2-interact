@@ -15,12 +15,12 @@
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "watch": "NODE_ENV=dev rollup -c -w",
-    "lint": "yarn lint:js && yarn lint:css",
+    "lint": "$npm_execpath lint:js && $npm_execpath lint:css",
     "lint:js": "eslint --ext .js,.vue src",
-    "lint:js:fix": "yarn lint:js --fix",
+    "lint:js:fix": "$npm_execpath lint:js --fix",
     "lint:css": "stylelint src/**/*.{vue,css}",
-    "pretest": "yarn lint",
-    "prepare": "yarn build",
+    "pretest": "$npm_execpath lint",
+    "prepare": "$npm_execpath build",
     "docs:dev": "vuepress dev",
     "docs:build": "vuepress build"
   },
