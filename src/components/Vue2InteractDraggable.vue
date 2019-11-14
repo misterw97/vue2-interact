@@ -130,7 +130,8 @@ export default {
         this.interactIsAnimating = false;
       },
 
-      onmove: (event) => {
+      onmove: event => {
+        this.$emit("onmove", event);
         let x = 0;
         let y = 0;
 
